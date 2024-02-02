@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: AlbertGoma-LFS268-CICD-JenkinsX
+    provider: github
+    repository: jx3-terraform
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: albertgoma-lfs268-cicd-jenkinsx-jx3-terraform
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform.git
+  org: AlbertGoma-LFS268-CICD-JenkinsX
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-terraform
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform

@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         AlbertGoma-LFS268-CICD-JenkinsX/cluster: true
+        AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         AlbertGoma-LFS268-CICD-JenkinsX/cluster: merge
+        AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - AlbertGoma-LFS268-CICD-JenkinsX/cluster
+        - AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - AlbertGoma-LFS268-CICD-JenkinsX/cluster
+        - AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform
       target_url: http://lighthouse-jx.34.76.221.114.nip.io/merge/status
 kind: ConfigMap
 metadata:
