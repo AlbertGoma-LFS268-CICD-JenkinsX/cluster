@@ -6,6 +6,10 @@ data:
       repos:
       - AlbertGoma-LFS268-CICD-JenkinsX/cluster
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +25,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +37,20 @@ data:
     plugins:
       AlbertGoma-LFS268-CICD-JenkinsX/cluster:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform:
       - approve
       - assign
       - help
@@ -53,6 +76,11 @@ data:
     - repos:
       - AlbertGoma-LFS268-CICD-JenkinsX/cluster
       trusted_org: AlbertGoma-LFS268-CICD-JenkinsX
+    - repos:
+      - AlbertGoma-LFS268-CICD-JenkinsX/jx3-terraform
+      trusted_org: AlbertGoma-LFS268-CICD-JenkinsX
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
