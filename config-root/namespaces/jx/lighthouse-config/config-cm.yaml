@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - AlbertGoma-LFS268-CICD-JenkinsX/cluster
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.34.76.221.114.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
